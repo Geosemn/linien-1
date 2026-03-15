@@ -70,7 +70,10 @@ if __name__ == "__main__":
 
     platform.add_source_dir(REPO_ROOT_DIR / "gateware" / "verilog")
     import os
-    build_dir = Path(os.environ.get("LIENIEN_BUILD_DIR", str(REPO_ROOT_DIR / "gateware" / "build")))
+
+    build_dir = Path(
+        os.environ.get("LIENIEN_BUILD_DIR", str(REPO_ROOT_DIR / "gateware" / "build"))
+    )
     platform.build(root, build_name="top", build_dir=build_dir)
     bit2bin(
         build_dir / "top.bit",

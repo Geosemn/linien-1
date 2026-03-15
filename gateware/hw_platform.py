@@ -16,6 +16,7 @@
 # along with Linien.  If not, see <http://www.gnu.org/licenses/>.
 import pathlib
 from pathlib import Path
+
 from migen.build.generic_platform import (
     ConstraintError,
     Drive,
